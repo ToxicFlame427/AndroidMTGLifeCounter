@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!--Player 1 theme choice-->
+    <LinearLayout
+        android:rotation="180"
+        android:orientation="horizontal"
+        android:id="@+id/p1theme"
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/whiteMana">
+
+        <ImageButton
+            android:id="@+id/blueMana1"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/water_icon"
+            android:backgroundTint="@color/blueMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/redMana1"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/fire_icon"
+            android:backgroundTint="@color/redMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/greenMana1"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/tree_icon"
+            android:backgroundTint="@color/greenMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/blackMana1"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/skull_icon"
+            android:backgroundTint="@color/blackMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/whiteMana1"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/sun_icon"
+            android:backgroundTint="@color/whiteMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+    </LinearLayout>
+
+    <!--Player 1 count-->
+    <LinearLayout
+        android:id="@+id/p1countview"
+        android:rotation="180"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/whiteMana"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:backgroundTint="@color/transparent"
+            android:id="@+id/p1minus"
+            android:onClick="plusOrMinusCountP1"
+            android:textSize="50sp"
+            android:text="-"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:onClick="showDialogBox"
+            android:id="@+id/p1count"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="70sp"
+            android:text="0"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+
+        <Button
+            android:backgroundTint="@color/transparent"
+            android:id="@+id/p1plus"
+            android:onClick="plusOrMinusCountP1"
+            android:textSize="50sp"
+            android:text="+"
+            android:layout_margin="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+    <!--Center bar - settings-->
+    <LinearLayout
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Net time, for less confusion, use an image button to create buttons with drawables on them-->
+        <ImageButton
+            android:onClick="resetCounters"
+            android:layout_margin="2dp"
+            android:background="@drawable/baseline_refresh_18"
+            android:backgroundTintMode="@color/transparent"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+    </LinearLayout>
+
+    <!--Player 2 count-->
+    <LinearLayout
+        android:id="@+id/p2countview"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/blueMana"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/p2minus"
+            android:onClick="plusOrMinusCountP2"
+            android:backgroundTint="@color/transparent"
+            android:textSize="50sp"
+            android:text="-"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+
+        <TextView
+            android:onClick="showDialogBox"
+            android:id="@+id/p2count"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="70sp"
+            android:text="0"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:layout_width="100dp"/>
+
+        <Button
+            android:backgroundTint="@color/transparent"
+            android:id="@+id/p2plus"
+            android:onClick="plusOrMinusCountP2"
+            android:textSize="50sp"
+            android:text="+"
+            android:layout_margin="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </LinearLayout>
+
+    <!--Player 2 theme choice-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/p2theme"
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/blueMana">
+
+        <ImageButton
+            android:id="@+id/blueMana2"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/water_icon"
+            android:backgroundTint="@color/blueMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/redMana2"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/fire_icon"
+            android:backgroundTint="@color/redMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/greenMana2"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/tree_icon"
+            android:backgroundTint="@color/greenMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/blackMana2"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/skull_icon"
+            android:backgroundTint="@color/blackMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+        <ImageButton
+            android:id="@+id/whiteMana2"
+            android:onClick="themeChange"
+            android:layout_margin="2dp"
+            android:background="@drawable/sun_icon"
+            android:backgroundTint="@color/whiteMana"
+            android:layout_height="match_parent"
+            android:layout_width="46dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
